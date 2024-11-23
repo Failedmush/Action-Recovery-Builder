@@ -35,9 +35,6 @@ on:
         default: recovery
       RECOVERY_INSTALLER:
         description: Include recovery installer zip
-        type: boolean
-        required: true
-        default: false
 
       LDCHECK:
         description: 'Use LDCHECK'
