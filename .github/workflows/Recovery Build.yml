@@ -23,7 +23,7 @@ on:
         description: 'Name of device-specific makefile from tree (format: <PREFIX>_<DEVICE_NAME>)'
         required: true
         default: renoir
-      BUILD_TARGET:
+       BUILD_TARGET:
         type: choice
         description: Partition containing recovery ramdisk
         options:
@@ -31,7 +31,12 @@ on:
         - recovery
         - vendor_boot
         required: true
-        default: boot
+        default: recovery
+      RECOVERY_INSTALLER:
+        description: Include recovery installer zip
+        type: boolean
+        required: true
+        default: false
 
 jobs:
   build:
