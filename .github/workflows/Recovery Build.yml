@@ -14,7 +14,7 @@ on:
       DEVICE_TREE_BRANCH:
         description: Device Tree Branch
         required: true
-        default: TWRP
+        default: android-13
       DEVICE_PATH:
         description: Path the device tree should be synced to, relative to source root
         required: true
@@ -22,7 +22,7 @@ on:
       DEVICE_MAKEFILE:
         description: 'Name of device-specific makefile from tree (format: <PREFIX>_<DEVICE_NAME>)'
         required: true
-        default: renoir
+        default: twrp_renoir
       BUILD_TARGET:
         type: choice
         description: Partition containing recovery ramdisk
@@ -36,7 +36,7 @@ on:
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     # You can use either of the ubuntu-20.04 or ubuntu-22.04 runner
     steps:
     - name: Display Run Parameters
