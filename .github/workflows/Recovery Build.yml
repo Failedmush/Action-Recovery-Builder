@@ -18,15 +18,15 @@ on:
       DEVICE_TREE_URL:
         description: Device Tree URL
         required: true
-        default: https://github.com/Failedmush/android_device_xiaomi_renoir-twrp
+        default: https://github.com/TeamWin/android_device_asus_I003D
       DEVICE_TREE_BRANCH:
         description: Device Tree Branch
         required: true
-        default: android-13
+        default: android-12.1
       DEVICE_PATH:
         description: Path the device tree should be synced to, relative to source root
         required: true
-        default: device/xiaomi/renoir
+        default: device/Xiaomi/renoir
       DEVICE_NAME:
         description: Device Name from tree (should match name on twrp_<DEVICE_NAME>.mk)
         required: true
@@ -53,7 +53,7 @@ on:
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
-    runs-on: Ubuntu 22.04
+    runs-on: ubuntu-20.04
     # You can use either of the ubuntu-20.04 or ubuntu-22.04 runner
     steps:
     - name: Display Run Parameters
